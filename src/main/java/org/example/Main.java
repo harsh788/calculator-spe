@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         logger.info("Start of execution");
-        System.out.println("----- Welcome to Calculator -----");
+        System.out.println("-----Welcome to Calculator-----");
         System.out.println("Choose the operation you want to perform");
         System.out.println("1. Addition");
         System.out.println("2. Subtraction");
