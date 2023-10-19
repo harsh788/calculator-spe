@@ -18,6 +18,8 @@ public class Main {
         System.out.println("4. Division");
         int input = sc.nextInt();
 
+        Main obj = new Main();
+
         if(input < 1 || input > 4) {
             System.out.println("Invalid input");
             logger.error("Invalid input");
@@ -31,11 +33,11 @@ public class Main {
         int b = sc.nextInt();
 
         if(input == 1) {
-            System.out.println("Result of "+a+" + "+b+" = "+add(a, b));
+            System.out.println("Result of "+a+" + "+b+" = "+obj.add(a, b));
         } else if(input == 2) {
-            System.out.println("Result of "+a+" - "+b+" = "+subtract(a, b));
+            System.out.println("Result of "+a+" - "+b+" = "+obj.subtract(a, b));
         } else if(input == 3) {
-            System.out.println("Result of "+a+" * "+b+" = "+multiply(a, b));
+            System.out.println("Result of "+a+" * "+b+" = "+obj.multiply(a, b));
         } else if(input == 4) {
             if(b == 0) {
                 System.out.println("Division by 0 is not possible");
@@ -43,30 +45,30 @@ public class Main {
                 sc.close();
                 return;
             }
-            System.out.println("Result of "+a+" / "+b+" = "+divide(a, b));
+            System.out.println("Result of "+a+" / "+b+" = "+obj.divide(a, b));
         }
         sc.close();
     }
 
-    static int add(int a, int b) {
+    public int add(int a, int b) {
         logger.info("START OP: Add");
         int result = a + b;
         logger.info("END OP: Add");
         return result;
     }
-    static int subtract(int a, int b) {
+    public int subtract(int a, int b) {
         logger.info("START OP: Subtract");
         int result = a - b;
         logger.info("END OP: Subtract");
         return result;
     }
-    static int multiply(int a, int b) {
+    public int multiply(int a, int b) {
         logger.info("START OP: Multiply");
         int result = a * b;
         logger.info("END OP: Multiply");
         return result;
     }
-    static int divide(int a, int b) {
+    public int divide(int a, int b) {
         logger.info("START OP: Divide");
         int result = a / b;
         logger.info("END OP: Divide");
